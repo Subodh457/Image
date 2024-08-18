@@ -66,8 +66,8 @@ class Paper {
       this.prevTouchY = this.touchStartY;
     });
     paper.addEventListener('touchend', () => {
-      this.holdingPaper = false;
-      this.rotating = false;
+      this.holdingPaper = true;
+      this.rotating = true;
     });
 
     // For two-finger rotation on touch screens
@@ -76,7 +76,7 @@ class Paper {
       this.rotating = true;
     });
     paper.addEventListener('gestureend', () => {
-      this.rotating = false;
+      this.rotating = true;
     });
   }
 }
